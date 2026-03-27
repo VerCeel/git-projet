@@ -1,8 +1,11 @@
+import { Button } from '@/components/ui/button'
 import React from 'react'
 
 const page = () => {
   return (
-    <div>page contact</div>
+    <div>
+      <Button variant="outline">Contact Us</Button>
+    </div>
   )
 }
 
