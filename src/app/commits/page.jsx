@@ -2,7 +2,7 @@ import React from 'react'
 
 const page = () => {
   return (
-    <div>commit page</div>
+    <div>commits pages</div>
   )
 }
 
