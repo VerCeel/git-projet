@@ -1,4 +1,5 @@
 import "./globals.css";
+import Background from "@/components/static/Background";
 
 
 export const metadata = {
@@ -11,7 +12,9 @@ export default function RootLayout({ children }) {
     <html
       lang="en"
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <Background/>
+        {children}</body>
     </html>
   );
 }
