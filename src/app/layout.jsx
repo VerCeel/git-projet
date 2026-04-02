@@ -1,0 +1,27 @@
+import { Nunito } from "next/font/google";
+import "./globals.css";
+import NavBar from "@/components/static/Navbar";
+import Background from "@/components/static/Background";
+import Footer from "@/components/static/Footer";
+
+const nunito = Nunito({
+  weight: "400",
+  subsets: ["latin"],
+});
+
+export const metadata = {
+  title: "Github project",
+  description: "soutnance ",
+};
+
+export default function RootLayout({ children }) {
+  return (
+    <html lang="en">
+      <body className={nunito.className + " text-white"}>
+        <NavBar />
+        <Background>{children}</Background>
+        <Footer />
+      </body>
+    </html>
+  );
+}
