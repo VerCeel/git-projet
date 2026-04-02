@@ -4,6 +4,10 @@ import Link from "next/link";
 import React from "react";
 import { BsDiscord } from "react-icons/bs";
 
+export const metadata = {
+  title: 'Contact',
+};
+
 const page = () => {
   return (
     <div className="w-3xl text-shadow-md">
