@@ -34,7 +34,7 @@
     "**/*.mts",
     "**/*.ts",
     "**/*.tsx"
-  ],
+, "src/components/static/Footer.jsx", "src/components/static/Navbar.jsx"  ],
   "exclude": [
     "node_modules"
   ]

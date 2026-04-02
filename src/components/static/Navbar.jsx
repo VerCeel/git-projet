@@ -22,7 +22,7 @@ const links = [
 const NavBar = () => {
   const pathname = usePathname();
   return (
-    <div className="fixed text-white top-6 shadow-lg ring-2 ring-black/20 right-40 left-40 w-auto z-50 flex items-center justify-between px-6 py-3 rounded-xl border border-white/20 bg-black/20 backdrop-blur-xl">
+    <div className="fixed text-neutral-300 hover:text-white top-6 shadow-lg ring-2 ring-black/20  px-10  w-7xl left-1/2 -translate-x-1/2 z-50 flex items-center justify-between py-3 rounded-full border border-white/20 bg-white/10 backdrop-blur-xl">
       <Link href={"/"} className="flex text-xl gap-2 items-center">
         <FaGithub size={40}/>
         Github Project

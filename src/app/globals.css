@@ -8,6 +8,11 @@
   background-color: white;
 }
 
+::selection {
+  background-color: rgba(5, 0, 4, 0.653); 
+  color: white;
+}
+
 @theme inline {
   --font-heading: var(--font-sans);
   --font-sans: var(--font-sans);
