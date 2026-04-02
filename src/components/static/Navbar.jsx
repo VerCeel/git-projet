@@ -5,13 +5,13 @@ import { FaGithub } from "react-icons/fa";
 import { usePathname } from "next/navigation";
 
 const links = [
-  {
-    href: "/branches-list",
-    label: "Branches list",
+    {
+    href: "/commits-list",
+    label: "Commits",
   },
   {
-    href: "/commits-list",
-    label: "Commits List",
+    href: "/branches-list",
+    label: "Branches",
   },
   {
     href: "/contact",

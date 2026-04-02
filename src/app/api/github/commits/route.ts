@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 
 export async function GET() {
   const response = await fetch(
-    "https://api.github.com/repos/VerCeel/git-soutenance/commits",
+    "https://api.github.com/repos/VerCeel/git-projet/commits",
 
     {
       headers: {

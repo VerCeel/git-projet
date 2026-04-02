@@ -23,7 +23,7 @@ export default function RootLayout({ children }) {
       <body className={nunito.className + " text-white"}>
         <NavBar />
         <Background>
-          <div className="fixed top-30 bottom-20 w-7xl flex items-center justify-center">
+          <div className="pt-24 pb-20 max-w-7xl mx-auto overflow-y-auto">
             {children}
           </div>
         </Background>

@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 
 export async function GET() {
   const response = await fetch(
-    "https://api.github.com/repos/VerCeel/git-soutenance/branches",
+    "https://api.github.com/repos/VerCeel/git-projet/branches",
     {
       headers: {
         Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
