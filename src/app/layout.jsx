@@ -5,13 +5,16 @@ import Background from "@/components/static/Background";
 import Footer from "@/components/static/Footer";
 
 const nunito = Nunito({
-  weight: "400",
+  weight: ['400', '600', '700'],
   subsets: ["latin"],
 });
 
 export const metadata = {
-  title: "Github project",
-  description: "soutnance ",
+  title: {
+    default: 'Github Project',
+    template: '%s | Github Project',
+  },
+  description: "soutnance Github project",
 };
 
 export default function RootLayout({ children }) {
