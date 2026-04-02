@@ -1,11 +1,13 @@
-import { Github, User } from "lucide-react";
+"use client";
+
 import Link from "next/link";
-import { Button } from "../ui/button";
+import { FaGithub } from "react-icons/fa";
+import { usePathname } from "next/navigation";
 
 const links = [
   {
-    href: "/",
-    label: "Home",
+    href: "/branches-list",
+    label: "Branches list",
   },
   {
     href: "/commits-list",
@@ -14,33 +16,27 @@ const links = [
   {
     href: "/contact",
     label: "Contact",
-  },
-  {
-    href: "/login",
-    label: "Login",
-  },
+  }
 ];
 
 const NavBar = () => {
+  const pathname = usePathname();
   return (
-    <div className="fixed text-neutral-200 top-4 shadow-lg ring-1 ring-black/5 right-4 left-4 w-auto z-50 flex items-center justify-between px-6 py-3 rounded-lg border border-white/10 bg-black/20 backdrop-blur-xl">
-      <div className="flex text-xl gap-2 items-center">
-        <Github />
-        Github
-      </div>
+    <div className="fixed text-white top-6 shadow-lg ring-2 ring-black/20 right-40 left-40 w-auto z-50 flex items-center justify-between px-6 py-3 rounded-xl border border-white/20 bg-black/20 backdrop-blur-xl">
+      <Link href={"/"} className="flex text-xl gap-2 items-center">
+        <FaGithub size={40}/>
+        Github Project
+      </Link>
 
       <div className="flex items-center gap-4">
-        {links.map((link, index) => (
-          <div key={index} className="text-neutral-300 hover:text-white">
-            <Link href={link.href}>{link.label}</Link>
-          </div>
-        ))}
-        <Button size="lg" className="px-2">
-          <Link className="flex items-center gap-2" href="/login">
-            <User />
-            Login
-          </Link>
-        </Button>
+        {links.map((link, index) => {
+          const isActive = pathname === link.href;
+          return (
+            <div key={index} className={`text-neutral-300 hover:text-white ${isActive ? 'text-white underline-offset-5 underline' : ''}`}>
+              <Link href={link.href}>{link.label}</Link>
+            </div>
+          );
+        })}
       </div>
     </div>
   );
