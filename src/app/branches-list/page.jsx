@@ -1,4 +1,5 @@
 import React from 'react'
+import BranchList from '@/components/BranchList';
 
 export const metadata = {
   title: 'Branches',
@@ -6,7 +7,10 @@ export const metadata = {
 
 const page = () => {
   return (
-    <div>branches pages</div>
+    <div>
+      <h1>branches pages</h1>
+      <BranchList />
+    </div>
   )
 }
 
