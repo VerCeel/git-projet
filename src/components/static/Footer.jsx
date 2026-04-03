@@ -1,8 +1,8 @@
 const Footer = () => {
   return (
-    <div className="fixed text-white bottom-4 shadow-lg ring-2 ring-black/20 w-7xl left-1/2 -translate-x-1/2 z-50 flex items-center justify-between py-3 rounded-full border border-white/20 bg-white/10 backdrop-blur-xl">
-      <p className="text-sm text-center w-full">
-       Created by : HIRICH Oussama | EL HARIM Yasmine © IW3-2026
+    <div className="fixed text-neutral-300 text-sm md:text-xl bottom-6 shadow-lg ring-2 ring-black/20 md:px-10 px-3 md:left-20 md:right-20 left-3 right-3 z-50 flex items-center justify-between md:py-3 py-1 rounded-full border border-white/20 bg-white/10 backdrop-blur-xl">
+      <p className="text-center w-full text-xs md:text-sm">
+       Created by : <br /> HIRICH Oussama | EL HARIM Yasmine © IW3-2026
       </p>
     </div>
   )

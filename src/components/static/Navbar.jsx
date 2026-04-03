@@ -22,19 +22,30 @@ const links = [
 const NavBar = () => {
   const pathname = usePathname();
   return (
-    <div className="fixed text-neutral-300 hover:text-white top-6 shadow-lg ring-2 ring-black/20  px-10  w-7xl left-1/2 -translate-x-1/2 z-50 flex items-center justify-between py-3 rounded-full border border-white/20 bg-white/10 backdrop-blur-xl">
-      <Link href={"/"} className="flex text-xl gap-2 items-center">
-        <FaGithub size={40}/>
+    <div className="fixed text-neutral-300 text-sm md:text-xl hover:text-white top-6 shadow-lg ring-2 ring-black/20 md:px-10 px-3 md:left-20 md:right-20 left-3 right-3 z-50 flex items-center justify-between py-3 rounded-full border border-white/20 bg-white/10 backdrop-blur-xl">
+      <Link href={"/"} className="flex md:gap-2 gap-1 items-center">
+        <FaGithub className="md:size-10 size-4"/>
         Github Project
       </Link>
 
-      <div className="flex items-center gap-4">
+      <div className="flex items-center md:gap-4 gap-2">
         {links.map((link, index) => {
           const isActive = pathname === link.href;
           return (
-            <div key={index} className={`text-neutral-300 hover:text-white ${isActive ? 'text-white underline-offset-5 underline' : ''}`}>
-              <Link href={link.href}>{link.label}</Link>
-            </div>
+            <Link
+              key={index}
+              href={link.href}
+              className={`group relative  transition-colors duration-100 ${
+                isActive ? "text-white" : "text-neutral-300 hover:text-white"
+              }`}
+            >
+              {link.label}
+              <span
+                className={`absolute left-0 bottom-[3px] h-[1.5px] w-full bg-neutral-200 transition-transform duration-100 ease-out ${
+                  isActive ? "scale-x-100" : "scale-x-0"
+                } origin-left group-hover:scale-x-100`}
+              />
+            </Link>
           );
         })}
       </div>

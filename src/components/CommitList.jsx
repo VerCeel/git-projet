@@ -22,7 +22,7 @@ const CommitList = () => {
         {commits?.map((commit) => (
           <li
             key={commit.shha}
-            className="flex items-center gap-4 border-b border-neutral-800 pb-3"
+            className="flex items-center gap-4 border-b border-neutral-600 pb-3"
           >
             <img
               src={commit.author?.avatar_url}

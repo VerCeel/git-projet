@@ -7,7 +7,7 @@ export const metadata = {
 
 const page = () => {
   return (
-    <div>
+    <div className='md:px-4 px-2'>
       <h1 className="text-3xl font-bold mb-4">Commits</h1>
       <CommitList />
     </div>
