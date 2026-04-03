@@ -4,7 +4,7 @@ import SoftAurora from "../SoftAurora";
 const Background = ({ children }) => {
   return (
     <div>
-      <div className="absolute min-h-screen w-full bg-black/95 -z-10">
+      <div className="absolute h-screen w-full bg-black/95 -z-10">
         <div className="fixed inset-0">
           <SoftAurora
             speed={0.6}
