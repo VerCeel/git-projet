@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@react-email/render": "^2.0.5",
@@ -27,6 +28,8 @@
     "@tailwindcss/postcss": "^4",
     "@types/node": "25.5.0",
     "@types/react": "^19.2.14",
+    "eslint": "^10.1.0",
+    "husky": "^9.1.7",
     "tailwindcss": "^4",
     "typescript": "6.0.2"
   }
