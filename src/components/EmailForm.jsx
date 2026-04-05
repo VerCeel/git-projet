@@ -94,7 +94,7 @@ const EmailForm = () => {
 };
 
 const base = {
-  background: "rgba(255,255,255,0.05)",
+  background: "rgba(44, 25, 25, 0.05)",
   border: "1px solid rgba(255,255,255,0.08)",
   borderRadius: "8px",
   color: "#e2e8f0",
