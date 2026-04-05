@@ -1,0 +1,12 @@
+#!/bin/sh
+
+echo "Verification ..."
+
+npx eslint .
+
+if [ $? -ne 0 ]; then
+  echo "Error, Commit canceled"
+  exit 1
+fi
+
+echo "Code OK"
