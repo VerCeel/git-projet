@@ -1,36 +1,156 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Git Project
 
-## Getting Started
+Application web développée avec Next.js (App Router) qui permet d'afficher les branches et les commits d'un dépôt GitHub, avec une interface moderne et des routes API côté serveur.
 
-First, run the development server:
+## Aperçu
+
+Le projet propose:
+
+- Une page d'accueil avec navigation globale.
+- Une page de consultation des branches du dépôt.
+- Une page de consultation des commits du dépôt.
+- Une API interne qui interroge l'API GitHub.
+- Une API d'envoi d'email via Resend (template React Email).
+
+## Stack Technique
+
+- Next.js 16 (App Router)
+- React 19
+- Tailwind CSS 4
+- TypeScript (routes API en `.ts`)
+- Resend + React Email
+- UI utilitaires: Lucide, React Icons, composants style shadcn
+
+## Prérequis
+
+Avant de démarrer:
+
+- Node.js 20+ recommandé
+- npm (ou pnpm/yarn/bun si vous adaptez les commandes)
+- Un token GitHub valide
+- Une clé API Resend (uniquement si vous utilisez l'endpoint email)
+
+## Installation
+
+```bash
+npm install
+```
+
+## Configuration Environnement
+
+Créer un fichier `.env.local` à la racine du projet:
+
+```env
+GITHUB_TOKEN=ghp_xxxxxxxxxxxxxxxxxxxx
+RESEND_API_KEY=re_xxxxxxxxxxxxxxxxxxxx
+```
+
+Variables utilisées:
+
+- `GITHUB_TOKEN`: authentification des appels API GitHub.
+- `RESEND_API_KEY`: envoi d'emails via `POST /api/resend`.
+
+## Lancer le Projet
+
+### Développement
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Application disponible sur:
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+```text
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Build production
 
-## Learn More
+```bash
+npm run build
+npm run start
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Scripts Disponibles
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- `npm run dev`: lance le serveur de développement.
+- `npm run build`: construit l'application Next.js.
+- `npm run start`: démarre l'application en mode production.
+- `npm run prepare`: initialise Husky.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Pages Principales
 
-## Deploy on Vercel
+- `/`: page d'accueil.
+- `/branches-list`: affichage des branches.
+- `/commits-list`: affichage des commits.
+- `/commit-by-branch`: page dédiée (actuellement placeholder visuel).
+- `/contact`: page de contact.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Endpoints API
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### GitHub
+
+- `GET /api/github/branches`
+	- Retourne les branches du dépôt cible GitHub.
+- `GET /api/github/commits`
+	- Retourne les commits du dépôt cible GitHub.
+- `GET /api/github/commitbybranch?sha=<branch_or_sha>`
+	- Retourne les commits filtrés par `sha`.
+
+### Email
+
+- `POST /api/resend`
+	- Corps JSON attendu:
+
+```json
+{
+	"name": "Votre nom",
+	"email": "vous@example.com",
+	"phone": "+33...",
+	"message": "Votre message"
+}
+```
+
+	- Validation incluse:
+	- champs requis (`name`, `email`, `message`)
+	- format email
+	- longueur maximale des champs
+	- nettoyage basique des entrées utilisateur
+
+## Structure du Projet
+
+```text
+src/
+	app/
+		api/
+			github/
+				branches/
+				commits/
+				commitbybranch/
+			resend/
+		branches-list/
+		commits-list/
+		commit-by-branch/
+		contact/
+	components/
+		static/
+		ui/
+		email/
+```
+
+## Notes Techniques
+
+- Le rendu des listes (branches/commits) se fait côté client via `fetch` vers les routes API internes.
+- Les requêtes vers GitHub utilisent le token serveur via variables d'environnement.
+- L'endpoint email utilise un template React Email converti en HTML avant envoi.
+
+## Améliorations Possibles
+
+- Ajouter une gestion d'erreurs UX côté frontend (chargement, erreurs API, empty states).
+- Ajouter des tests unitaires/intégration (routes API et composants).
+- Ajouter un fichier `.env.example` pour simplifier l'onboarding.
+- Corriger/aligner la logique `commit-by-branch` entre page UI et données réellement consommées.
+
+## Auteur
+
+Projet développé par VerCeel.
