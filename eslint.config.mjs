@@ -1,9 +1,12 @@
 import js from "@eslint/js";
 import globals from "globals";
 import pluginReact from "eslint-plugin-react";
+import tsParser from "@typescript-eslint/parser";
+import tsPlugin from "@typescript-eslint/eslint-plugin";
 import { defineConfig } from "eslint/config";
 
 export default defineConfig([
+  // JS
   {
     files: ["**/*.{js,mjs,cjs,jsx}"],
     plugins: { js },
@@ -13,6 +16,22 @@ export default defineConfig([
     },
   },
 
+  // TS 
+  {
+    files: ["**/*.{ts,tsx}"],
+    languageOptions: {
+      parser: tsParser,
+    },
+    plugins: {
+      "@typescript-eslint": tsPlugin,
+    },
+    rules: {
+      "no-var": "error",
+      "@typescript-eslint/no-unused-vars": "error",
+    },
+  },
+
+  // React
   pluginReact.configs.flat.recommended,
 
   {
