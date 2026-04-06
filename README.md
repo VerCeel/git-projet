@@ -153,4 +153,4 @@ src/
 
 ## Auteur
 
-Projet développé par VerCeel.
+HIRICH Oussama | EL HARIM Yasmine IW3-2026 -
