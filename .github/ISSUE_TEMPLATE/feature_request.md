@@ -4,15 +4,22 @@ about: Suggest a new feature for this project
 title: "[FEATURE] "
 labels: enhancement
 ---
+## Problème ou besoin
+Explique le besoin que cette fonctionnalité doit résoudre.
 
-**Is your feature request related to a problem? Please describe.**  
-decrire le problème rencontré. Par exemple : une fonctionnalité manquante ou quelque chose qui ne fonctionne pas comme prévu.
+## Proposition
+Décris la fonctionnalité ou le comportement attendu.
 
-**Describe the solution you'd like**  
-Expliquer la solution ou la fonctionnalité que tu aimerais ajouter au projet.
+## Pourquoi cette solution
+Explique en quoi cette option est préférable.
 
-**Describe alternatives you've considered**  
-decrire les autres solutions ou idées que tu as envisagées avant de proposer celle-ci.
+## Alternatives envisagées
+Liste les autres idées ou approches que tu as considérées.
 
-**Additional context**  
-Ajouter information utile : détails supplémentaires, exemples ou captures d’écran si nécessaire.
+## Critères d'acceptation
+- [ ] La fonctionnalité répond au besoin décrit
+- [ ] Le comportement attendu est clair et testable
+- [ ] Les impacts éventuels sur l'existant sont identifiés
+
+## Contexte additionnel
+Ajoute des exemples, maquettes, captures d'écran ou toute autre information utile.
