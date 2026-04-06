@@ -4,32 +4,28 @@ about: Signaler un bug
 title: "[BUG] "
 labels: bug
 ---
-**Describe the bug**
-A clear and concise description of what the bug is.
+## Décris le bug
+Explique clairement ce qui ne fonctionne pas.
 
-**To Reproduce**
-Steps to reproduce the behavior:
-1. Go to '...'
-2. Click on '....'
-3. Scroll down to '....'
-4. See error
+## Étapes pour reproduire
+1. Aller sur `...`
+2. Cliquer sur `...`
+3. Observer le résultat
 
-**Expected behavior**
-A clear and concise description of what you expected to happen.
+## Comportement attendu
+Décris ce qui aurait dû se passer.
 
-**Screenshots**
-If applicable, add screenshots to help explain your problem.
+## Comportement observé
+Décris le résultat réel et le message d'erreur, s'il y en a un.
 
-**Desktop (please complete the following information):**
- - OS: [e.g. iOS]
- - Browser [e.g. chrome, safari]
- - Version [e.g. 22]
+## Environnement
+- OS: 
+- Navigateur / outil: 
+- Version: 
+- Branche concernée: 
 
-**Smartphone (please complete the following information):**
- - Device: [e.g. iPhone6]
- - OS: [e.g. iOS8.1]
- - Browser [e.g. stock browser, safari]
- - Version [e.g. 22]
+## Captures d'écran ou logs
+Ajoute ici des captures, extraits de console ou logs utiles.
 
-**Additional context**
-Add any other context about the problem here.
+## Informations supplémentaires
+Ajoute tout contexte qui peut aider à diagnostiquer le problème.
