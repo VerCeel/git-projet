@@ -6,6 +6,15 @@ import tsPlugin from "@typescript-eslint/eslint-plugin";
 import { defineConfig } from "eslint/config";
 
 export default defineConfig([
+   {
+    ignores: [
+      ".next/**",
+      "node_modules/**",
+      "dist/**",
+      "build/**",
+      "out/**",
+    ],
+  },
   // JS
   {
     files: ["**/*.{js,mjs,cjs,jsx}"],
