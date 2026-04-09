@@ -151,6 +151,11 @@ src/
 - Ajouter un fichier `.env.example` pour simplifier l'onboarding.
 - Corriger/aligner la logique `commit-by-branch` entre page UI et données réellement consommées.
 
+## Contribution
+
+Les contributions sont les bienvenues.
+Consultez le guide de contribution: [`CONTRIBUTING.md`](CONTRIBUTING.md).
+
 ## Auteur
 
 HIRICH Oussama | EL HARIM Yasmine IW3-2026 -
